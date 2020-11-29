@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <VideoView
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/player_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/video"
-        />
+        android:layout_height="match_parent"
+        app:show_buffering="when_playing"
+        app:show_shuffle_button="true"/>
 
 
 

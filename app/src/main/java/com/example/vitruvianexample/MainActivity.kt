@@ -1,22 +1,12 @@
 package com.example.vitruvianexample
 
-import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.danikula.videocache.HttpProxyCacheServer
+import com.google.android.exoplayer2.database.ExoDatabaseProvider
 
 class MainActivity : AppCompatActivity() {
-    private var proxy: HttpProxyCacheServer? = null
-
-    fun getProxy(): HttpProxyCacheServer {
-        return proxy ?: newProxy().also { proxy = it }
-    }
-
-    private fun newProxy(): HttpProxyCacheServer {
-        return HttpProxyCacheServer(this)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
